@@ -1,0 +1,17 @@
+p {
+    color: #3d3d3d;
+}
+
+#tituloBienvenida {
+    color: #d6336c;
+    font-weight: bold;
+}
+
+.aviso {
+    color: #2f9e44;
+}
+
+img {
+    border-radius: 50%;
+    object-fit: cover;
+}
