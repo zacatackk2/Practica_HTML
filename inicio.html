@@ -21,17 +21,64 @@
                         <li class="nav-item"><a class="nav-link" href="profile.html">Perfil</a></li>
                         <li class="nav-item"><a class="nav-link" href="tags.html">Etiquetas</a></li>
                         <li class="nav-item"><a class="nav-link" href="formulario.html">Formulario</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html">Cerrar sesion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html" id="btnCerrarSesion">Cerrar sesion</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container mt-5">
-        <div class="card shadow-sm p-4 text-center">
+    <div class="container mt-5 mb-5">
+        <div class="card shadow-sm p-4 text-center mb-4">
             <p id="tituloBienvenida"><strong>Sesion iniciada correctamente</strong></p>
-            <p>Bienvenido, desde aqui puedes navegar al resto del sitio.</p>
+            <p id="textoBienvenida">Bienvenido, desde aqui puedes navegar al resto del sitio.</p>
+        </div>
+
+        <div class="card shadow-sm p-4 mb-4">
+            <h4 id="tituloFormUsuario" class="mb-3">Agregar usuario</h4>
+            <form id="formUsuario">
+                <div class="row g-2">
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="userName" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="userAge" placeholder="Edad" required>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="userPoints" placeholder="Puntos" required>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" class="form-control" id="userUsername" placeholder="Usuario" required>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="password" class="form-control" id="userPassword" placeholder="Contrasena" required>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button type="submit" id="btnGuardar" class="btn btn-primary">Guardar</button>
+                    <button type="button" id="btnCancelar" class="btn btn-secondary d-none">Cancelar</button>
+                </div>
+            </form>
+            <p id="mensajeUsuarios" class="mt-3 mb-0"></p>
+        </div>
+
+        <div class="card shadow-sm p-4">
+            <h4 class="mb-3">Usuarios</h4>
+            <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Puntos</th>
+                            <th>Usuario</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaUsuarios"></tbody>
+                </table>
+            </div>
         </div>
     </div>
 
